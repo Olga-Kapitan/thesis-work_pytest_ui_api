@@ -23,8 +23,9 @@ class KinopoiskApi:
             'limit': limit,
             'query': query
         }
-        resp = requests.get(self.url + 'v1.4/movie/search', params=params, headers=self.headers)
-        return resp.json()
+        resp = requests.get(
+            self.url + 'v1.4/movie/search', params=params, headers=self.headers)
+        return resp
 
     @allure.step("Api. Получить фильм по {id}")
     def search_film_by_id(self, id: int):
@@ -32,7 +33,8 @@ class KinopoiskApi:
 
             Принимает параметр id фильма.
         """
-        resp = requests.get(self.url + 'v1.4/movie/' + str(id), headers=self.headers)
+        resp = requests.get(
+            self.url + 'v1.4/movie/' + str(id), headers=self.headers)
         return resp.json()
 
     @allure.step("Api. Получить актера по имени {query}")
@@ -48,11 +50,13 @@ class KinopoiskApi:
             'limit': limit,
             'query': query
         }
-        resp = requests.get(self.url + 'v1.4/person/search', params=params, headers=self.headers)
+        resp = requests.get(
+            self.url + 'v1.4/person/search', params=params, headers=self.headers)
         return resp.json()
 
     @allure.step("Api. Получить фильм по нескольким фильтрам")
-    def free_search_film(self, selectFields: str, year: str, countries_name: str, genres_name: str, persons_id: int) -> dict:
+    def free_search_film(
+        self, selectFields: str, year: str, countries_name: str, genres_name: str, persons_id: int) -> dict:
         """ Осуществляет универсальный поиск фильма
             по нескольким параметрам.
 
