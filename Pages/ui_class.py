@@ -5,8 +5,6 @@ import allure
 from time import sleep
 
 
-@allure.epic("KinopoiskUI")
-@allure.severity("blocker")
 class KinopoickUI:
 
     def __init__(self, driver: WebDriver) -> None:

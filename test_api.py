@@ -5,7 +5,8 @@ import pytest
 
 api_poisk = KinopoiskApi("https://api.kinopoisk.dev/")
 
-
+@allure.epic("KinopoiskApi")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - 1")
 @allure.story("Поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -21,6 +22,8 @@ def test_search_film_by_name():
         assert body['alternativeName'] == 'The Gentlemen'
 
 
+@allure.epic("KinopoiskApi")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - 2")
 @allure.story("Поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -36,6 +39,8 @@ def test_search_film_by_id():
         assert body['name'] == 'Джентльмены'
 
 
+@allure.epic("KinopoiskApi")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - 3")
 @allure.story("Поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -49,6 +54,8 @@ def test_search_actor_by_name():
         assert actor['sex'] == 'Мужской'
 
 
+@allure.epic("KinopoiskApi")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - 4")
 @allure.story("Поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -66,6 +73,8 @@ def test_free_search_film():
         assert one_film['name'] == 'Гарри Поттер и философский камень'
 
 
+@allure.epic("KinopoiskApi")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - 5")
 @allure.story("Поиск информации о фильмах и актерах")
 @allure.feature("READ")

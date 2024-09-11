@@ -2,8 +2,6 @@ import requests
 import allure
 
 
-@allure.epic("KinopoiskApi")
-@allure.severity("blocker")
 class KinopoiskApi:
 
     def __init__(self, url):

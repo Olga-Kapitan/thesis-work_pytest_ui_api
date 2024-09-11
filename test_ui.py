@@ -4,6 +4,8 @@ import pytest
 import allure
 
 
+@allure.epic("KinopoiskUI")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - UI - 1")
 @allure.story("Расширенный поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -22,6 +24,8 @@ def test_search_main(chrome_browser):
         assert 'Джентльмены' in title
 
 
+@allure.epic("KinopoiskUI")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - UI - 2")
 @allure.story("Расширенный поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -42,6 +46,8 @@ def test_search_by_creators(chrome_browser):
         assert 'Джентльмены' in title
 
 
+@allure.epic("KinopoiskUI")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - UI - 3")
 @allure.story("Расширенный поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -60,6 +66,8 @@ def test_search_info_creators(chrome_browser):
         assert 'Мэттью Макконахи' in title
 
 
+@allure.epic("KinopoiskUI")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - UI - 4")
 @allure.story("Расширенный поиск информации о фильмах и актерах")
 @allure.feature("READ")
@@ -78,6 +86,8 @@ def test_search_fiml_by_word(chrome_browser):
         assert 'Енот' in title
 
 
+@allure.epic("KinopoiskUI")
+@allure.severity("blocker")
 @allure.id("Kinopoisk - UI - 5")
 @allure.story("Расширенный поиск информации о фильмах и актерах")
 @allure.feature("READ")
